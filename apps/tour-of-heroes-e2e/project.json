@@ -1,0 +1,22 @@
+{
+  "name": "tour-of-heroes-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/tour-of-heroes-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@angular-devkit/build-angular:protractor",
+      "options": {
+        "protractorConfig": "apps/tour-of-heroes-e2e/protractor.conf.js",
+        "devServerTarget": "tour-of-heroes:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "tour-of-heroes:serve:production"
+        }
+      }
+    }
+  },
+  "implicitDependencies": ["tour-of-heroes"],
+  "tags": []
+}
