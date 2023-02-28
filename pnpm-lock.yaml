@@ -32,6 +32,7 @@ specifiers:
   '@types/jasmine': ~4.3.0
   '@types/jest': 28.1.1
   '@types/node': ^16.11.35
+  '@types/pubsub-js': ^1.8.3
   '@typescript-eslint/eslint-plugin': ^5.36.1
   '@typescript-eslint/parser': ^5.36.1
   angular-in-memory-web-api: ~0.15.0
@@ -54,6 +55,7 @@ specifiers:
   nx: 15.7.2
   prettier: ^2.6.2
   protractor: ~7.0.0
+  pubsub-js: ^1.9.4
   rxjs: ~7.8.0
   ts-jest: 28.0.5
   ts-node: 10.9.1
@@ -74,6 +76,7 @@ dependencies:
   '@nrwl/angular': 15.7.2_ioge7m5osi7emwx4kjkupqk5ja
   '@nrwl/web': 15.7.2_3wfovxmsbd5a65ki36n2i66lwu
   angular-in-memory-web-api: 0.15.0_u7amrreaxewzbfcpfpus6q3iuy
+  pubsub-js: 1.9.4
   rxjs: 7.8.0
   tslib: 2.5.0
   zone.js: 0.12.0
@@ -99,6 +102,7 @@ devDependencies:
   '@types/jasmine': 4.3.1
   '@types/jest': 28.1.1
   '@types/node': 16.18.13
+  '@types/pubsub-js': 1.8.3
   '@typescript-eslint/eslint-plugin': 5.54.0_l4bbdrgi64j4qhdxd5wyz7waci
   '@typescript-eslint/parser': 5.54.0_hx5tgzcbd2ycqgjduqhliuc3jm
   copyfiles: 2.4.1
@@ -4151,6 +4155,10 @@ packages:
 
   /@types/prettier/2.7.2:
     resolution: {integrity: sha512-KufADq8uQqo1pYKVIYzfKbJfBAc0sOeXqGbFaSpv8MRmC/zXgowNZmFcbngndGk922QDmOASEXUZCaY48gs4cg==}
+
+  /@types/pubsub-js/1.8.3:
+    resolution: {integrity: sha512-6BqY04dh2UV1dNV690tyJVJYQ0U6qBH4tU+FCwY1Mhl8jOPOP9qiIvgLnB59cVik/E6/R002oXZpGiDm+2C8eA==}
+    dev: true
 
   /@types/q/0.0.32:
     resolution: {integrity: sha512-qYi3YV9inU/REEfxwVcGZzbS3KG/Xs90lv0Pr+lDtuVjBPGd1A+eciXzVSaRvLify132BfcvhvEjeVahrUl0Ug==}
@@ -10436,6 +10444,10 @@ packages:
 
   /psl/1.9.0:
     resolution: {integrity: sha512-E/ZsdU4HLs/68gYzgGTkMicWTLPdAftJLfJFlLUAAKZGkStNU72sZjT66SnMDVOfOWY/YAoiD7Jxa9iHvngcag==}
+
+  /pubsub-js/1.9.4:
+    resolution: {integrity: sha512-hJYpaDvPH4w8ZX/0Fdf9ma1AwRgU353GfbaVfPjfJQf1KxZ2iHaHl3fAUw1qlJIR5dr4F3RzjGaWohYUEyoh7A==}
+    dev: false
 
   /pump/3.0.0:
     resolution: {integrity: sha512-LwZy+p3SFs1Pytd/jYct4wpv49HiYCqd9Rlc5ZVdk0V+8Yzv6jR5Blk3TRmPL1ft69TxP0IMZGJ+WPFU2BFhww==}
