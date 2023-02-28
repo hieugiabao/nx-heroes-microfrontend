@@ -1,6 +1,15 @@
-const { withModuleFederation } = require('@nrwl/angular/module-federation');
-const config = require('./module-federation.config');
-const webpackConfig = withModuleFederation(config);
+const {
+  withModuleFederationPlugin,
+} = require('@angular-architects/module-federation/webpack');
+
+const webpackConfig = withModuleFederationPlugin({
+  name: 'dashboard',
+  filename: 'remoteEntry.js',
+  exposes: {
+    './Module': './apps/dashboard/src/app/dashboard/dashboard.module.ts',
+  },
+});
+
 module.exports = {
   ...webpackConfig,
   output: {

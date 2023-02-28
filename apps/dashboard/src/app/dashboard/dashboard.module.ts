@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { HeroSearchComponent } from '../hero-search/hero-search.component';
 import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
@@ -15,6 +16,6 @@ import { DashboardComponent } from './dashboard.component';
       },
     ]),
   ],
-  declarations: [DashboardComponent],
+  declarations: [DashboardComponent, HeroSearchComponent],
 })
 export class DashBoardModule {}

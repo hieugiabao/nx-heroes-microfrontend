@@ -1,9 +1,14 @@
-import { NxWelcomeComponent } from './nx-welcome.component';
 import { Route } from '@angular/router';
+import { loadRemoteModule } from '@angular-architects/module-federation';
 
 export const appRoutes: Route[] = [
   {
     path: '',
-    component: NxWelcomeComponent,
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        type: 'module',
+        exposedModule: './Module',
+      }).then((m) => m.DashBoardModule),
   },
 ];
