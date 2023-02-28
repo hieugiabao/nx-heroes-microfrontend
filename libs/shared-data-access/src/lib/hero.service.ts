@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Hero } from 'models';
 import { catchError, map, Observable, of, tap } from 'rxjs';
-import * as PubSub from 'pubsub-js';
+// import * as PubSub from 'pubsub-js';
 
 @Injectable({
   providedIn: 'root',
@@ -109,6 +109,7 @@ export class HeroService {
 
   /** Log a HeroService message with the MessageService */
   private log(message: string) {
-    PubSub.publish('HERO_MESSAGES', `Hero message: ${message}`);
+    // PubSub.publish('HERO_MESSAGES', `Hero message: ${message}`);
+    console.log(`Hero message: ${message}`);
   }
 }

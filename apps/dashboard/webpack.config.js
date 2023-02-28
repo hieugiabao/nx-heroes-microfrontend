@@ -1,3 +1,11 @@
 const { withModuleFederation } = require('@nrwl/angular/module-federation');
 const config = require('./module-federation.config');
-module.exports = withModuleFederation(config);
+const webpackConfig = withModuleFederation(config);
+module.exports = {
+  ...webpackConfig,
+  output: {
+    ...webpackConfig.output,
+    publicPath: 'http://localhost:4201/',
+    scriptType: 'text/javascript',
+  },
+};
