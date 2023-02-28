@@ -5,18 +5,26 @@
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@angular-devkit/build-angular:protractor",
+      "executor": "@nrwl/cypress:cypress",
       "options": {
-        "protractorConfig": "apps/tour-of-heroes-e2e/protractor.conf.js",
-        "devServerTarget": "tour-of-heroes:serve"
+        "cypressConfig": "apps/tour-of-heroes-e2e/cypress.config.ts",
+        "devServerTarget": "tour-of-heroes:serve:development",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {
           "devServerTarget": "tour-of-heroes:serve:production"
         }
       }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/tour-of-heroes-e2e/**/*.{js,ts}"]
+      }
     }
   },
-  "implicitDependencies": ["tour-of-heroes"],
-  "tags": []
+  "tags": [],
+  "implicitDependencies": ["tour-of-heroes"]
 }
