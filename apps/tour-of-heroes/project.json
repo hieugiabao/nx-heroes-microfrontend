@@ -23,7 +23,8 @@
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/tour-of-heroes/webpack.config.js"
-        }
+        },
+        "commonChunk": false
       },
       "configurations": {
         "production": {

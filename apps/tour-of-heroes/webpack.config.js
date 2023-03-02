@@ -19,7 +19,7 @@ module.exports = {
   ...webpackConfig,
   output: {
     ...webpackConfig.output,
-    publicPath: 'http://localhost:4200/',
-    scriptType: 'text/javascript',
+    // publicPath: 'http://localhost:4200/',
+    // scriptType: 'text/javascript',
   },
 };

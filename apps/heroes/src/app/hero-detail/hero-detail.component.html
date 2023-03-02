@@ -1,4 +1,4 @@
-<div *ngIf="hero" class="bg-dark-bg pl-3 pr-3">
+<div *ngIf="hero; else no_hero" class="bg-dark-bg pl-3 pr-3">
   <h2 class="text-3xl !mb-4 text-primary">
     {{ hero.name | uppercase }} Details
   </h2>
@@ -31,3 +31,6 @@
     Save
   </button>
 </div>
+<ng-template #no_hero>
+  <h2 class="text-3xl mt-4 text-center">Hero not found</h2>
+</ng-template>

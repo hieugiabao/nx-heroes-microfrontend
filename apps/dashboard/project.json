@@ -23,7 +23,8 @@
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/dashboard/webpack.config.js"
-        }
+        },
+        "commonChunk": false
       },
       "configurations": {
         "production": {

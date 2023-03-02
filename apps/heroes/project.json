@@ -20,7 +20,8 @@
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/heroes/webpack.config.js"
-        }
+        },
+        "commonChunk": false
       },
       "configurations": {
         "production": {

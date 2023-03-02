@@ -9,7 +9,10 @@
     "build": "nx build",
     "watch": "nx build --watch --configuration development",
     "test": "nx test",
-    "e2e": "nx e2e"
+    "e2e": "nx e2e",
+    "affected:apps": "nx affected:apps",
+    "affected:libs": "nx affected:libs",
+    "affected:build": "nx affected:build"
   },
   "private": true,
   "dependencies": {
@@ -60,6 +63,7 @@
     "eslint": "~8.15.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
+    "http-server": "^14.1.1",
     "jasmine-core": "~4.5.0",
     "jasmine-marbles": "~0.9.2",
     "jasmine-spec-reporter": "~7.0.0",
