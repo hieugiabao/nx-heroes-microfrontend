@@ -1,12 +1,13 @@
 import { Route } from '@angular/router';
 import { loadRemoteModule } from '@angular-architects/module-federation';
+import { environment } from '../environments/environment';
 
 export const appRoutes: Route[] = [
   {
     path: '',
     loadChildren: () =>
       loadRemoteModule({
-        remoteEntry: 'http://localhost:4201/remoteEntry.js',
+        remoteEntry: `${environment.DASHBOARD_MICROAPP_ORIGIN}/remoteEntry.js`,
         type: 'module',
         exposedModule: './Module',
       }).then((m) => m.DashBoardModule),
@@ -15,7 +16,7 @@ export const appRoutes: Route[] = [
     path: 'heroes',
     loadChildren: () =>
       loadRemoteModule({
-        remoteEntry: 'http://localhost:4202/remoteEntry.js',
+        remoteEntry: `${environment.HEROES_MICROAPP_ORIGIN}/remoteEntry.js`,
         type: 'module',
         exposedModule: './Module',
       }).then((m) => m.HeroesModule),
