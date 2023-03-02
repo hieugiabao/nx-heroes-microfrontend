@@ -3,7 +3,12 @@ import { Route } from '@angular/router';
 export const appRoutes: Route[] = [
   {
     path: '',
-    loadChildren: () =>
-      import('./remote-entry/entry.module').then((m) => m.RemoteEntryModule),
+    pathMatch: 'full',
+    redirectTo: 'heroes',
+  },
+  {
+    path: 'heroes',
+    loadChildren: async () =>
+      (await import('./heroes/heroes.module')).HeroesModule,
   },
 ];

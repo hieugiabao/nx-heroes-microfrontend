@@ -11,4 +11,13 @@ export const appRoutes: Route[] = [
         exposedModule: './Module',
       }).then((m) => m.DashBoardModule),
   },
+  {
+    path: 'heroes',
+    loadChildren: () =>
+      loadRemoteModule({
+        remoteEntry: 'http://localhost:4202/remoteEntry.js',
+        type: 'module',
+        exposedModule: './Module',
+      }).then((m) => m.HeroesModule),
+  },
 ];
