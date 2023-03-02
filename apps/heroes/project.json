@@ -15,7 +15,11 @@
         "polyfills": ["zone.js"],
         "tsConfig": "apps/heroes/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/heroes/src/favicon.ico", "apps/heroes/src/assets"],
+        "assets": [
+          "apps/heroes/src/favicon.ico",
+          "apps/heroes/src/assets",
+          "apps/heroes/src/netlify.toml"
+        ],
         "styles": ["apps/heroes/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {

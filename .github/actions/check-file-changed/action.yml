@@ -1,0 +1,19 @@
+name: Check changed files
+description: Check to see what type of files changed
+outputs:
+  is_angular_changed:
+    description: Is this an angular related changed?
+    value: ${{ steps.check-angular-source.outputs.any_changed }}
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Check Angular Source
+      id: check-angular-source
+      uses: tj-actions/changed-files@v10
+      with:
+        files: |
+          apps/**
+          libs/**
+          package.json
+          nx.json
