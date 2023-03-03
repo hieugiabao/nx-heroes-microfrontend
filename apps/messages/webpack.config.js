@@ -152,7 +152,7 @@ module.exports = (config, context) => {
   config.context = process.cwd();
   config.entry = ['apps/messages/src/index.html', 'apps/messages/src/main.ts'];
   config.output = {
-    publicPath: 'auto',
+    // publicPath: 'auto',
     path: path.resolve(__dirname, '../../dist/apps/messages'),
     // filename: '[bundle].js',
     uniqueName: 'messages_microapp',

@@ -29,8 +29,8 @@ export const appRoutes: Route[] = [
     path: 'messages',
     component: WebComponentWrapper,
     data: {
-      type: 'module',
-      remoteEntry: 'http://localhost:4203/remoteEntry.js',
+      type: 'script',
+      remoteEntry: `${environment.MESSAGES_MICROAPP_ORIGIN}/remoteEntry.js`,
       exposedModule: './messages-wc',
       remoteName: 'messages_microapp',
       elementName: 'messages-element',
