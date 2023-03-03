@@ -43,7 +43,7 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_MESSAGES_SITE_ID }}
         with:
-          args: deploy --dir=./dist/apps/tour-of-heroes --prod
+          args: deploy --dir=./dist/apps/messages --prod
 
       - name: Deploy Main App Netlify
         uses: netlify/actions/cli@master
