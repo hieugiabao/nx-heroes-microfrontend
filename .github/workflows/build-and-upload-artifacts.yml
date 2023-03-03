@@ -61,7 +61,7 @@ jobs:
         uses: actions/setup-node@v2
 
       - name: Install dependencies
-        if: ${{ steps.cached-deps.outputs.cache-hit != 'true' }}
+        # if: ${{ steps.cached-deps.outputs.cache-hit != 'true' }}
         run: npm install -g pnpm && pnpm install
 
       - name: Download Nx Cache

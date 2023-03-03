@@ -20,6 +20,6 @@ module.exports = {
   output: {
     ...webpackConfig.output,
     // publicPath: 'http://localhost:4200/',
-    // scriptType: 'text/javascript',
+    scriptType: 'text/javascript',
   },
 };
